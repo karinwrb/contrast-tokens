@@ -1,0 +1,46 @@
+{
+  "tokens": [
+    {
+      "name": "body-text",
+      "foreground": "#212121",
+      "background": "#ffffff",
+      "level": "AA",
+      "fontSize": "normal"
+    },
+    {
+      "name": "heading-primary",
+      "foreground": "#000000",
+      "background": "#ffffff",
+      "level": "AAA",
+      "fontSize": "normal"
+    },
+    {
+      "name": "caption-text",
+      "foreground": "#757575",
+      "background": "#ffffff",
+      "level": "AA",
+      "fontSize": "normal"
+    },
+    {
+      "name": "button-label",
+      "foreground": "#ffffff",
+      "background": "#1976d2",
+      "level": "AA",
+      "fontSize": "normal"
+    },
+    {
+      "name": "large-hero-text",
+      "foreground": "#333333",
+      "background": "#f5f5f5",
+      "level": "AA",
+      "fontSize": "large"
+    },
+    {
+      "name": "low-contrast-example",
+      "foreground": "#aaaaaa",
+      "background": "#cccccc",
+      "level": "AA",
+      "fontSize": "normal"
+    }
+  ]
+}
