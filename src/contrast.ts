@@ -56,3 +56,21 @@ export function passesWcag(
   }
   return ratio >= (size === 'large' ? WCAG_THRESHOLDS.AA_LARGE : WCAG_THRESHOLDS.AA_NORMAL);
 }
+
+/**
+ * Returns the highest WCAG level and size combination passed for a given
+ * foreground/background color pair, or null if no level is met.
+ *
+ * Example: { level: 'AAA', size: 'normal' } means the pair passes AAA for normal text.
+ */
+export function wcagResult(
+  foreground: string,
+  background: string
+): { level: WcagLevel; size: TextSize } | null {
+  const ratio = contrastRatio(foreground, background);
+  if (passesWcag(ratio, 'AAA', 'normal')) return { level: 'AAA', size: 'normal' };
+  if (passesWcag(ratio, 'AAA', 'large')) return { level: 'AAA', size: 'large' };
+  if (passesWcag(ratio, 'AA', 'normal')) return { level: 'AA', size: 'normal' };
+  if (passesWcag(ratio, 'AA', 'large')) return { level: 'AA', size: 'large' };
+  return null;
+}
